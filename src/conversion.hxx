@@ -5,6 +5,10 @@
 
 namespace replxx {
 
+#ifndef __cpp_char8_t
+typedef unsigned char char8_t;
+#endif
+
 ConversionResult copyString8to32( char32_t* dst, size_t dstSize, size_t& dstCount, char const* src );
 ConversionResult copyString8to32( char32_t* dst, size_t dstSize, size_t& dstCount, char8_t const* src );
 void copyString32to8( char* dst, size_t dstSize, size_t* dstCount, char32_t const* src, size_t srcSize );
